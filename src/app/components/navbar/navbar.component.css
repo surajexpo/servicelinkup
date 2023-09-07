@@ -1,0 +1,35 @@
+.logo{
+    height: 50px;
+    width: auto;
+}
+.navbar{
+    box-shadow: 0px 0px 10px 0px #000;
+}
+.signin{
+    color: #fff;
+    background-color: #00539C;
+    border-radius: 5px;
+    margin: 0  0.3rem 0.3rem 0;
+    max-width: auto;
+   
+}
+.header2{
+    width: 50%;
+   margin-left: auto;
+}
+.topbar-col {
+    display: inline-block;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+.topbar-col a i {
+    margin-right: 10px;
+    color: #FFD662;
+}
+
+@media (max-width: 576px) {
+    .signin{
+       width: fit-content;
+       padding: 0.3rem;
+    }
+}
