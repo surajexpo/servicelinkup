@@ -73,7 +73,7 @@ padding: 25px 15px;
     position: relative;
     width: 100%;
     padding: 15px 0 0 0;
-    background: #00539C;
+    background-color: #00539C;
 }
 
 .header.home {
@@ -118,7 +118,7 @@ padding: 25px 15px;
 
 .header .hero a.btn:hover {
     color: #000000;
-    background: #FFD662;
+    background-color: #FFD662;
 }
 
 .header .hero .form {
@@ -193,7 +193,6 @@ padding: 25px 15px;
 
 .section-header::before {
     position: absolute;
-    content: "";
     width: 100px;
     height: 3px;
     left: calc(50% - 50px);
@@ -204,7 +203,7 @@ padding: 25px 15px;
 
 .section-header::after {
     position: absolute;
-    content: "";
+    
     width: 20px;
     height: 9px;
     left: calc(50% - 10px);
