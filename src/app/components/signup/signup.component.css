@@ -1,0 +1,139 @@
+
+.general-form{
+    width: 50%;
+    margin: auto;
+  }
+  .body{
+    background-color:#191919 ;
+    margin: 0;
+    padding: 0;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .login {
+    height: auto;
+    color: white;
+  }
+  .text-fields {
+    width: 100%;
+    box-shadow: 0px 0px 9px 1px  #00539C;
+    height: 3.5rem;
+    border-radius: 5px;
+    position: static;
+    z-index: 0;
+  }
+  .text-fields input{
+    margin-top: 5px;
+    border: none;
+    background-color: #191919 !important;
+    outline: none;
+    height: 3rem;
+    width: 90%;
+    font-size: large;
+    color: white !important;
+  }
+  .text-fields .f-select{
+    border: none;
+    appearance: none;
+    outline: none;
+    background-color:#191919 ;
+    height: 3rem;
+    width: 100%;
+    color: white !important;
+  
+  }
+  .text-fields .f-select option{
+    background-color:#191919 ;
+  }
+  .f-label {
+    width: fit-content;
+    padding: 0 6px;
+    background-color: #191919;
+    position: relative;
+    top: 14px;
+  }
+  input[type="checkbox"] {
+    position: relative;
+    cursor: pointer;
+  }
+  input[type="checkbox"]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    background-color: #000000eb;
+  }
+  input[type="checkbox"]:checked:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+  }
+  .terms {
+    color:  #00539C;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .log-in {
+    background-color: #00539C;
+    color: #ffff;
+    width: 100%;
+    height: 4rem;
+    border-radius: 5px;
+  }
+  .step2{
+  display: none;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    
+  .text-fields input {
+    height: 2.5rem;
+  }
+  .text-fields {
+    height: 3rem;
+  }
+  /* .bg-image {
+    min-height: 743px;
+  } */
+  }
+  @media screen and (max-width: 576px) {
+    .general-form{
+      width:80%;
+    }
+    .f-label label, .small-font{
+      font-size: small;
+    }
+   
+  }
+  
+  
+  
+  
+  
+  

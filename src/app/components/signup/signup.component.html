@@ -1,0 +1,160 @@
+
+
+<div class="body"><div class="container mt-3">
+    <div class="general-form">
+      <div class="login rounded py-2">
+        <div class="text-center">
+          <h1 class="text-white">REGISTER</h1>
+        </div>
+        <div class="step1" [ngStyle]="{'display':step1}">
+          <form class="px-3" [formGroup]="registerForm">
+            <div class="mb-3">
+              <div class="text-center ms-3 f-label">
+                <label>mobile no.</label>
+              </div>
+              <div class="text-fields px-3">
+                <input type="text" formControlName="mobileNo" required />
+              </div>
+            </div>
+            <div
+              *ngIf="
+                getControl['mobileNo'].touched && getControl['mobileNo'].invalid
+              "
+              class="text-danger"
+            >
+              <div *ngIf="getControl['mobileNo'].errors?.['required']">
+                Mobile No. is required.
+              </div>
+              <div *ngIf="getControl['mobileNo'].errors?.['pattern']">
+                invalid Mobile Number.
+              </div>
+              <div *ngIf="getControl['mobileNo'].errors?.['length']">
+                connot be empty.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="text-center ms-3 f-label">
+                <label>Name</label>
+              </div>
+              <div class="text-fields px-3">
+                <input type="text" required />
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="text-center ms-3 f-label">
+                <label>Street address</label>
+              </div>
+              <div class="text-fields px-3">
+                <input type="text"  required />
+              </div>
+          </div>
+          <div class="mb-3">
+             
+
+              <div class="text-center ms-3 f-label">
+                <label>Apt \ Suite \other
+                  <small>optional</small></label>
+              </div>
+              <div class="text-fields px-3">
+                <input type="text"  required />
+              </div>
+          </div>
+          <div class="row">
+              <div class="mb-3 col-sm-6">
+
+                <div class="text-center ms-3 f-label">
+                  <label>Zip Code</label>
+                </div>
+                <div class="text-fields px-3">
+                  <input type="text"  required />
+                </div>
+
+                
+              </div>
+              <div class="mb-3 col-sm-6">
+                <div class="text-center ms-3 f-label">
+                  <label>City</label>
+                </div>
+                <div class="text-fields px-3">
+                  <input type="text"  required />
+                </div>
+              </div>
+              </div>
+  
+           
+           
+           
+          
+           
+        
+          
+            <div class="mb-3">
+              <label for="" class="small-font">
+                Photo
+              </label>
+            </div>
+            <div class="mb-3">
+              <div
+                class="text-fields d-flex align-items-center justify-content-center px-3"
+              >
+                <label for="upload" class="terms">Upload Photo</label>
+                <input type="file" class="d-none" id="upload" />
+              </div>
+            </div>
+  
+            <div id="recaptcha-verifier" class="mb-3"></div>
+           
+            <div class="mb-3 d-flex">
+              <input
+                type="checkbox"
+                class="me-3"
+                formControlName="iAgreeToTnC"
+                id="in-check"
+              /><label for="in-check" class="me-1 small-font"
+                >I agree with <a class="terms small-font">Terms and Conditions</a></label
+              >
+            </div>
+            <div id="sign-in-button" class="mb-3"></div>
+            <div class="mb-3">
+              <button type="button" (click)="sendOtp()" class="log-in" >
+                Send OTP
+              </button>
+              <!-- <mat-spinner color="warn" ></mat-spinner> -->
+            </div>
+            <div class="mb-3 text-center">
+              <label for="in-check" class="me-1 small-font"
+                >Already registered? </label
+              ><a routerLink="/login" class="terms">Log In</a>
+            </div>
+          </form>
+        </div>
+        <div  [ngStyle]="{'display':step2}">
+          <form class="px-3">
+            <div class="mb-3">
+              <div class="text-center ms-3 f-label">
+                <label>Enter otp</label>
+              </div>
+  
+              <div class="text-fields px-3">
+                <input
+                  type="text"
+                  [(ngModel)]="otp"
+                  [ngModelOptions]="{ standalone: true }"
+                  required
+                />
+              </div>
+            </div>
+  
+            <div class="mb-3">
+              <button type="button" (click)="verifyOTP()" class="log-in">
+                verify otp
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
